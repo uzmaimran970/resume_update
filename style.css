@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.printarea {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.printarea .header {
+    width: 100%;
+    height: 150px;
+    background-color: rgb(5, 22, 53);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    border: 5px solid white;
+    box-shadow: 3px 3px 10px rgba(95, 4, 15, .5);
+    cursor: pointer;
+    transition: .5s;
+    user-select: none;
+    filter: contrast(200%);
+}
+
+.header img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+}
+
+.header-text {
+    color: white;
+    width: 60%;
+    margin-left: auto;
+}
+
+.header-text h1 {
+    font-size: 80px;
+    font-weight: normal;
+}
+
+.header-text p {
+    font-size: 20px;
+    color: lightcyan;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left-area {
+    width: 30%;
+    background-color: rgb(40, 135, 173);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.left-area .contact {
+    margin-top: 130px;
+    padding: 0 90px;
+}
+
+.contact h4 {
+    font-size: 30px;
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.contact h5 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.contact p {
+    font-size: 17px;
+}
+
+.skills {
+    margin-top: 50px;
+}
+
+.skills h1 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.bars {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px 10px;
+    padding: 0 20px;
+}
+
+.bars .bar p {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.bar span {
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: rgb(3, 80, 99);
+    margin-top: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.bar span::before {
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 80%;
+    background-color: rgb(17, 17, 85);
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    border-radius: 10px;
+}
+
+.follow h1 {
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.follow h4 {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.follow p {
+    font-size: 15px;
+    color: rgb(23, 23, 95);
+}
+
+.right-area {
+    width: 70%;
+    padding: 50px;
+}
+
+.right-area h1 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.right-area h1 span {
+    margin-right: 30px;
+    font-size: 50px;
+    color: rgb(23, 23, 95);
+}
+
+.right-area p {
+    padding-left: 70px;
+    text-align: justify;
+    word-break: break-all;
+    font-size: 19px;
+    color: black;
+    margin-top: 10px;
+}
+
+.work-group {
+    margin: 10px 0;
+}
+
+.work .work-group {
+    position: relative;
+}
+
+.work-group h3 {
+    font-size: 22px;
+    font-weight: normal;
+    padding-left: 70px;
+}
+
+.work-group h4 {
+    font-size: 18px;
+    padding-left: 70px;
+    font-weight: normal;
+}
+
+.work-group span {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+/* Toggle button styling */
+#toggleWorkBtn,
+#toggleEduBtn,
+#toggleBtn {
+    background-color: rgb(23, 23, 95);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    outline: none;
+}
+
+#toggleWorkBtn:hover,
+#toggleEduBtn:hover,
+#toggleBtn:hover {
+    background-color: rgb(42, 157, 233);
+}
+
+button {
+    background-color: rgb(23, 23, 95);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    outline: none;
+    margin-top: 60px;
+}
+
+button:hover {
+    background-color: rgb(26, 75, 83);
+}
+
+/* Responsive Styles */
+
+
+
+/* For mobile screens (up to 400px) */
+@media (max-width: 400px) {
+    .printarea {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .header {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header img {
+        width: 120px;
+        height: 120px;
+        margin-top: 60px;
+        margin-left: 50px;
+    }
+
+    .header-text {
+        text-align: center;
+        margin-left: 20px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    .header-text p {
+        font-size: 14px;
+    }
+
+    .left-area {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .right-area {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .contact {
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .contact h4 {
+        font-size: 20px;
+    }
+
+    .contact h5 {
+        font-size: 14px;
+    }
+
+    .contact p {
+        font-size: 12px;
+    }
+
+    .skills h1 {
+        font-size: 20px;
+    }
+    
+    
+.work-group span {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    color: black;
+    font-weight: bold;
+    font-size: 8px;
+    
+}
+.work-group h3 {
+    font-size: 16px;
+    font-weight: normal;
+    padding-left: 20px;
+}
+.work span i{
+    font-size: 24px;
+}
+.right-area span i{
+    font-size: 24px;
+}
+.right-area h1{
+    font-size: 22px;
+}
+
+
+}
+
+  @media print {
+    body *{
+        visibility: hidden;
+    }
+    .printarea *{
+        visibility: visible;
+    }
+
+  }
+
+
+
+
+
+
+
+
+
